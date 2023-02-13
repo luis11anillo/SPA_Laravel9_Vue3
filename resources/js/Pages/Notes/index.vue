@@ -1,5 +1,9 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
+
+defineProps({
+    notes: Array,
+});
 </script>
 
 <template>
@@ -17,6 +21,17 @@ import AppLayout from '@/Layouts/AppLayout.vue';
                         <div class="px-4 sm:px0">
                             <h3 class="text-lg text-gray-900">Listado de notas</h3>
                             <p class="text-sm text-gray-500">Toma el registro correcto y ejecuta cualquier funci&oacute;n (Ver, Editar o Eliminar)</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 mt-5 md:mt-0">
+                        <div class="shadow bg-white md:rounded-md p-4">
+                            <table>
+                                <tr v-for="note in notes" >
+                                    <td class="border px-4 py-2">
+                                        {{ note.excerpt }}
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>
