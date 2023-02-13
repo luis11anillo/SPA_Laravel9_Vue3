@@ -4,6 +4,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 defineProps({
     notes: Array,
 });
+
 </script>
 
 <template>
@@ -29,6 +30,16 @@ defineProps({
                                 <tr v-for="note in notes" >
                                     <td class="border px-4 py-2">
                                         {{ note.excerpt }}
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        <inertia-lin :href="route('notes.show', note.id)">
+                                            Ver
+                                        </inertia-lin>
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        <inertia-lin :href="route('notes.edit', note.id)">
+                                            Editar
+                                        </inertia-lin>
                                     </td>
                                 </tr>
                             </table>
