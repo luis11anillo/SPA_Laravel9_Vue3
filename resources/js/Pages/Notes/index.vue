@@ -32,14 +32,14 @@ defineProps({
                                         {{ note.excerpt }}
                                     </td>
                                     <td class="px-4 py-2">
-                                        <inertia-lin :href="route('notes.show', note.id)">
+                                        <inertia-link :href="route('notes.show', note.id)">
                                             Ver
-                                        </inertia-lin>
+                                        </inertia-link>
                                     </td>
                                     <td class="px-4 py-2">
-                                        <inertia-lin :href="route('notes.edit', note.id)">
+                                        <inertia-link :href="route('notes.edit', note.id)">
                                             Editar
-                                        </inertia-lin>
+                                        </inertia-link>
                                     </td>
                                 </tr>
                             </table>
