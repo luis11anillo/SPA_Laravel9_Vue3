@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Note;
+use GuzzleHttp\Psr7\Message;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Symfony\Component\Mailer\Event\MessageEvent;
 
 class NoteController extends Controller
 {
@@ -97,6 +99,8 @@ class NoteController extends Controller
      */
     public function destroy(Note $note)
     {
-        //
+        $note->delete();
+
+        return redirect()->route('notes.index');
     }
 }

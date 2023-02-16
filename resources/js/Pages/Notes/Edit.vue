@@ -19,6 +19,11 @@ export default {
     methods: {
         submit() {
             this.$inertia.put(this.route('notes.update', this.note.id), this.form)
+        },
+        destroy() {
+            if (confirm('¿Desea eliminar?')) {
+                this.$inertia.destroy(this.route('notes.destroy', this.note.id))
+            }
         }
     }
 }
@@ -72,6 +77,12 @@ export default {
                                     class="bg-yellow-300 hover:bg-yellow-400 text-white font-bold py-2 px-4 ml-4 rounded-md">
                                     Descartar
                                 </inertia-link>
+
+                                <hr class="my-6">
+
+                                <a href="#" @click.prevent="destroy">
+                                    Eliminar
+                                </a>
                             </form>
 
                         </div>
