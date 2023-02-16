@@ -22,7 +22,7 @@ export default {
         },
         destroy() {
             if (confirm('¿Desea eliminar?')) {
-                this.$inertia.destroy(this.route('notes.destroy', this.note.id))
+                this.$inertia.delete(this.route('notes.destroy', this.note.id))
             }
         }
     }
@@ -81,7 +81,7 @@ export default {
                                 <hr class="my-6">
 
                                 <a href="#" @click.prevent="destroy">
-                                    Eliminar
+                                    Eliminar nota
                                 </a>
                             </form>
 
