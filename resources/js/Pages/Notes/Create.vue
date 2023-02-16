@@ -4,7 +4,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 export default {
     components: {
         AppLayout,
-    },
+    }, 
     data () {
     return {
         form: {
@@ -15,7 +15,7 @@ export default {
     },
     methods: {
         submit() {
-            this.$inertia.put(this.route('notes.update', this.note.id), this.form)
+            this.$inertia.post(this.route('notes.store'), this.form)
         }
     }
 }
