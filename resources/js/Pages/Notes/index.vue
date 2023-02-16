@@ -1,9 +1,24 @@
-<script setup>
+<script>
 import AppLayout from '@/Layouts/AppLayout.vue';
 
-defineProps({
-    notes: Array,
-});
+export default {
+    components: {
+        AppLayout,
+    },
+    props: {
+        notes: Array
+    },
+    data () {
+        return {
+            q: ''
+        }
+    },
+    watch: {
+        q: function(value) {
+            this.$inertia.replace(this.route('notes.index', {q: value}))
+        }
+    }
+}
 
 </script>
 
@@ -26,6 +41,20 @@ defineProps({
                     </div>
                     <div class="md:col-span-2 mt-5 md:mt-0">
                         <div class="shadow bg-white md:rounded-md p-4">
+
+                            <!-- Buscador y btn crear -->
+                            <div class="flex justify-between">
+                                <input type="text" class="form-imput rounded-full shadow-sm w-4/5" placeholder="Buscar" v-model="q">
+                                <inertia-link
+                                    class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+                                    :href="route('notes.create')">
+                                    Crear
+                                </inertia-link>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <!-- Tabla -->
                             <table>
                                 <tr v-for="note in notes" >
                                     <td class="border px-4 py-2">
