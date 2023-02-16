@@ -286,6 +286,9 @@ const logout = () => {
 
             <!-- Page Content -->
             <main>
+                <div v-if="$page.props.flash.status" class="bg-blue-300 text-white text-sm p-4 rounded">
+                    <p>{{ $page.props.flash.status }}</p>
+                </div>
                 <slot />
             </main>
         </div>
