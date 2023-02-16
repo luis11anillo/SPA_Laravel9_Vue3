@@ -31,24 +31,24 @@ export default {
         </template>
 
         <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto sm:-6px lg:px-8">
                 <div class="md:grid md:grid-cols-3 md:gap-6">
-                    <div class="md:col-span-1">
+                    <div class="md:col-span-3">
                         <div class="px-4 sm:px0">
-                            <h3 class="text-lg text-gray-900">Listado de notas</h3>
-                            <p class="text-sm text-gray-500">Toma el registro correcto y ejecuta cualquier funci&oacute;n (Ver, Editar o Eliminar)</p>
+                            <h2 class="text-xl text-center text-gray-900">Listado de notas</h2>
+                            <p class="text-sm text-center text-gray-500">Toma el registro correcto y ejecuta cualquier funci&oacute;n (Ver, Editar o Eliminar)</p>
                         </div>
                     </div>
-                    <div class="md:col-span-2 mt-5 md:mt-0">
+                    <div class="md:col-span-3 mt-5 md:mt-0">
                         <div class="shadow bg-white md:rounded-md p-4">
 
                             <!-- Buscador y btn crear -->
                             <div class="flex justify-between">
                                 <input type="text" class="form-imput rounded-full shadow-sm w-4/5" placeholder="Buscar" v-model="q">
                                 <inertia-link
-                                    class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+                                    class="bg-blue-500 hover:bg-blue-600 text-white text-bold px-4 py-2 rounded-full"
                                     :href="route('notes.create')">
-                                    Crear
+                                    +
                                 </inertia-link>
                             </div>
 
