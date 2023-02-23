@@ -23,9 +23,9 @@ export default {
 </script>
 
 <template>
-    <AppLayout title="Dashboard">
+    <AppLayout title="index">
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            <h2 class="font-semibold text-xl text-white leading-tight">
                 M&oacute;dulo de notas
             </h2>
         </template>
@@ -35,8 +35,8 @@ export default {
                 <div class="md:grid md:grid-cols-3 md:gap-6">
                     <div class="md:col-span-3">
                         <div class="px-4 sm:px0">
-                            <h2 class="text-xl text-center text-gray-900">Listado de notas</h2>
-                            <p class="text-sm text-center text-gray-500">Toma el registro correcto y ejecuta cualquier funci&oacute;n (Ver, Editar o Eliminar)</p>
+                            <h2 class="text-2xl text-center text-white text-semibold">Listado de notas</h2>
+                            <p class="text-sm text-center text-white">Toma el registro correcto y ejecuta cualquier funci&oacute;n (Ver, Editar o Eliminar)</p>
                         </div>
                     </div>
                     <div class="md:col-span-3 mt-5 md:mt-0">
@@ -60,12 +60,12 @@ export default {
                                     <td class="border px-4 py-2">
                                         {{ note.excerpt }}
                                     </td>
-                                    <td class="px-4 py-2">
+                                    <td class="px-4 py-2 hover:bg-blue-100">
                                         <inertia-link :href="route('notes.show', note.id)">
                                             Ver
                                         </inertia-link>
                                     </td>
-                                    <td class="px-4 py-2">
+                                    <td class="px-4 py-2 hover:bg-yellow-100 rounded-r-lg">
                                         <inertia-link :href="route('notes.edit', note.id)">
                                             Editar
                                         </inertia-link>
