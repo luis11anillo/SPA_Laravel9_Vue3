@@ -65,7 +65,7 @@ export default {
                                             Ver
                                         </inertia-link>
                                     </td>
-                                    <td class="px-4 py-2 hover:bg-yellow-100 rounded-r-lg">
+                                    <td class="px-4 py-2 hover:bg-amber-100 rounded-r-lg">
                                         <inertia-link :href="route('notes.edit', note.id)">
                                             Editar
                                         </inertia-link>

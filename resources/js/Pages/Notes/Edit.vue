@@ -66,13 +66,13 @@ export default {
                                     rows="8">
                                 </textarea>
 
-                                <button class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-md">
+                                <button class="bg-blue-800 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">
                                     Editar
                                 </button>
 
                                 <inertia-link
                                     :href="route('notes.index')"
-                                    class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 ml-4 rounded-md">
+                                    class="bg-amber-500 hover:bg-amber-400 text-white font-bold py-2 px-4 ml-4 rounded-md">
                                     Descartar
                                 </inertia-link>
 
