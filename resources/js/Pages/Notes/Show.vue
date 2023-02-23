@@ -10,7 +10,7 @@ defineProps({
 <template>
     <AppLayout title="Dashboard">
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            <h2 class="font-semibold text-xl text-white leading-tight">
                 M&oacute;dulo de notas
             </h2>
         </template>
@@ -20,8 +20,8 @@ defineProps({
                 <div class="md:grid md:grid-cols-3 md:gap-6">
                     <div class="md:col-span-1">
                         <div class="px-4 sm:px0">
-                            <h3 class="text-lg text-gray-800">Detalles de una notas</h3>
-                            <p class="text-sm text-gray-500">{{ note.excerpt }}</p>
+                            <h3 class="text-lg text-white font-semibold">Detalles de una notas</h3>
+                            <p class="text-sm text-gray-100 pt-4">{{ note.excerpt }}</p>
                         </div>
                     </div>
                     <div class="md:col-span-2 mt-5 md:mt-0">

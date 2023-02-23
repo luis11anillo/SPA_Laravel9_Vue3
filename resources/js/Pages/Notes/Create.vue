@@ -4,7 +4,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 export default {
     components: {
         AppLayout,
-    }, 
+    },
     data () {
     return {
         form: {
@@ -23,9 +23,9 @@ export default {
 </script>
 
 <template>
-    <AppLayout title="Dashboard">
+    <AppLayout title="index">
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            <h2 class="font-semibold text-xl text-white leading-tight">
                 M&oacute;dulo de notas
             </h2>
         </template>
@@ -35,21 +35,21 @@ export default {
                 <div class="md:grid md:grid-cols-3 md:gap-6">
                     <div class="md:col-span-1">
                         <div class="px-4 sm:px0">
-                            <h3 class="text-lg text-gray-900">Crear una nota</h3>
-                            <p class="text-sm text-gray-500">heheheheh</p>
+                            <h3 class="text-lg text-white font-semibold">Crear una nota</h3>
+                            <p class="text-sm text-gray-100">heheheheh</p>
                         </div>
                     </div>
                     <div class="md:col-span-2 mt-5 md:mt-0">
                         <div class="shadow bg-white md:rounded-md p-4">
                             <form @submit.prevent="submit">
-                                <label class="block font-medium text-sm text-gray-700">
+                                <label class="block font-medium text-sm text-gray-700 pb-2">
                                     Resumen
                                 </label>
                                 <textarea
                                     class="form-input w-full rounded-md shadow-sm"
                                     v-model="form.excerpt" >
                                 </textarea>
-                                <label class="block font-medium text-sm text-gray-700">
+                                <label class="block font-medium text-sm text-gray-700 py-2">
                                     Contenido
                                 </label>
                                 <textarea

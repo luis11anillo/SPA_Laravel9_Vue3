@@ -33,7 +33,7 @@ export default {
 <template>
     <AppLayout title="Dashboard">
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            <h2 class="font-semibold text-xl text-white leading-tight">
                 M&oacute;dulo de notas
             </h2>
         </template>
@@ -43,21 +43,21 @@ export default {
                 <div class="md:grid md:grid-cols-3 md:gap-6">
                     <div class="md:col-span-1">
                         <div class="px-4 sm:px0">
-                            <h3 class="text-lg text-gray-900">Editar una notas</h3>
-                            <p class="text-sm text-gray-500">S&iacute; editas no podr&aacute;s volver al estado anterior</p>
+                            <h3 class="text-lg text-white font-semibold">Editar una notas</h3>
+                            <p class="text-sm text-gray-100">S&iacute; editas no podr&aacute;s volver al estado anterior</p>
                         </div>
                     </div>
                     <div class="md:col-span-2 mt-5 md:mt-0">
                         <div class="shadow bg-white md:rounded-md p-4">
                             <form @submit.prevent="submit">
-                                <label class="block font-medium text-sm text-gray-700">
+                                <label class="block font-medium text-sm text-gray-700 pb-2">
                                     Resumen
                                 </label>
                                 <textarea
                                     class="form-input w-full rounded-md shadow-sm"
                                     v-model="form.excerpt" >
                                 </textarea>
-                                <label class="block font-medium text-sm text-gray-700">
+                                <label class="block font-medium text-sm text-gray-700 py-2">
                                     Contenido
                                 </label>
                                 <textarea
@@ -66,19 +66,19 @@ export default {
                                     rows="8">
                                 </textarea>
 
-                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
+                                <button class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-md">
                                     Editar
                                 </button>
 
                                 <inertia-link
                                     :href="route('notes.index')"
-                                    class="bg-yellow-300 hover:bg-yellow-400 text-white font-bold py-2 px-4 ml-4 rounded-md">
+                                    class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 ml-4 rounded-md">
                                     Descartar
                                 </inertia-link>
 
                                 <hr class="my-6">
 
-                                <a href="#" @click.prevent="destroy">
+                                <a href="#" @click.prevent="destroy" class="hover:text-red-800 hover:underline">
                                     Eliminar nota
                                 </a>
                             </form>
