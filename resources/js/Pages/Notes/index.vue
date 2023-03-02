@@ -47,6 +47,7 @@ export default {
                                 <input type="text" class="form-imput rounded-full shadow-sm w-4/5" placeholder="Buscar" v-model="q">
                                 <inertia-link
                                     class="bg-blue-500 hover:bg-blue-600 text-white text-bold px-4 py-2 rounded-full"
+                                    title="Crear una nota"
                                     :href="route('notes.create')">
                                     +
                                 </inertia-link>
